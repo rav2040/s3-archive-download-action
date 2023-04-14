@@ -15,11 +15,11 @@ async function main() {
 
         console.info("Downloading...");
 
-        const interval = setInterval(() => console.info("Still downloading..."), 10_000);
+        const interval = setInterval(() => console.info("Still downloading..."), 5000);
 
         const response = await s3.send(new GetObjectCommand({
             Bucket: bucket,
-            Key: posix.join(prefix, name + ".tgz"),
+            Key: posix.join(prefix, name),
         }));
 
         if (response.$metadata.httpStatusCode === 200 && response.Body !== undefined) {

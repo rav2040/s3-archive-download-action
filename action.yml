@@ -2,13 +2,13 @@ name: "S3 Archive Download"
 description: "Download and extract an archive uploaded using s3-archive-upload-action."
 inputs:
   bucket:
-    description: "An S3 bucket."
+    description: "The same value used for 'bucket' when uploading the archive."
     required: true
   name:
-    description: "The name used when uploading the archive."
+    description: "The same value used for 'name' when uploading the archive."
     required: true
   prefix:
-    description: "Prefixed to the archive name."
+    description: "The same value used for 'prefix' when uploading the archive."
     required: false
 runs:
   using: "node16"
