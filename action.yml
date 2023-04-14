@@ -1,0 +1,15 @@
+name: "S3 Archive Download"
+description: "Download and extract an archive uploaded using s3-archive-upload-action."
+inputs:
+  bucket:
+    description: "An S3 bucket."
+    required: true
+  name:
+    description: "The name used when uploading the archive."
+    required: true
+  prefix:
+    description: "Prefixed to the archive name."
+    required: false
+runs:
+  using: "node16"
+  main: "lib/main.js"
